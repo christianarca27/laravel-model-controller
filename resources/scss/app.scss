@@ -1,1 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
+
+.card {
+    cursor: pointer;
+    z-index: 0;
+
+    &:hover {
+        transform: scale(1.1);
+        z-index: 1;
+    }
+}

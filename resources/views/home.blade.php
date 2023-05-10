@@ -21,22 +21,24 @@
         <div class="container">
             <h1>Lista film</h1>
 
-            <div class="row">
+            <div class="row row-cols-3 g-4 py-5">
                 @foreach ($movies as $movie)
-                    <div class="card col-2">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $movie->title }}</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">{{ $movie->original_title }}</h6>
-                            <p class="card-text d-flex flex-column">
-                                <span>Nazionalit&agrave;:</span>
-                                <small>{{ $movie->nationality }}</small>
+                    <div class="col">
+                        <div class="card shadow p-3">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $movie->title }}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">{{ $movie->original_title }}</h6>
+                                <p class="card-text d-flex flex-column">
+                                    <span>Nazionalit&agrave;:</span>
+                                    <small>{{ $movie->nationality }}</small>
 
-                                <span>Data di uscita:</span>
-                                <small>{{ $movie->date }}</small>
+                                    <span>Data di uscita:</span>
+                                    <small>{{ $movie->date }}</small>
 
-                                <span>Voto:</span>
-                                <small>{{ $movie->vote }}</small>
-                            </p>
+                                    <span>Voto: {{ $movie->vote }}</span>
+                                    <small></small>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 @endforeach
